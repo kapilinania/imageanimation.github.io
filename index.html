@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transform:Translate</title>
+
+	<style type="text/css">
+
+		@-webkit-keyframes  ani {
+			0%{
+				
+				transform: translate(0px,0px) rotate(10deg);
+			}
+			25%{
+				
+				transform: translate(300px,0px) rotate(-10deg);
+			}
+			50%{
+				
+				transform: translate(300px,300px) rotate(10deg);
+			}
+			75%{
+				
+				transform: translate(0px,300px) rotate(-10deg);
+			}
+			100%{
+				transform: translate(0px,0px) rotate(10deg);
+			}
+		}
+
+         .middle_main{
+         	width: 300px;
+         	height: 300px;
+           position: relative;
+           border: 0px solid red;
+           transition: 5s; 
+			-webkit-animation:ani 5s 0s infinite linear;
+         	
+         }
+         .middle_main1{
+         	position: absolute;
+         	left: 0px;
+         	right: 0px;
+         	transition: 5s;
+            border-radius: 20%;
+            border:0px solid red;
+            overflow: hidden;
+         }
+         .middle_main:hover .middle_main1{
+         	transform:rotate(360deg);
+
+         }
+         .middle_main2{
+          width: 200px;
+          height: 200px;
+          border: 0px solid red;
+          overflow: hidden;
+          border-radius: 50%;
+          position: absolute;
+          top: 20%;
+          left: 15%;
+         }
+         .middle_main:hover .middle_main2{
+         	transform: rotate(-360deg);
+         	transition: 5s;
+         }
+
+
+		
+
+	</style>
+</head>
+<body>
+	<div class="middle_main">
+			<div class="middle_main1">
+				<img src="images/05.jpg" width="300px" height="300px">
+			</div>
+			<div class="middle_main2">
+				<img src="images/04.jpg" width="200px" height="200px">
+			</div>
+		</div>
+</body>
+</html>
